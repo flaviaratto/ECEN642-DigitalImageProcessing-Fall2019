@@ -27,4 +27,4 @@ The assignment contains questions from the textbook - **Digital Image Processing
 ### Final Individual Project
 Topic selected - Morning View mode
 A MATLAB implementation of the algorithm described in the paper by He et al. titled "Single Image Haze Removal using Dark Channel Prior" for haze removal from a single image (RGB and Grayscale).  
-[See Project Repository:](https://github.com/flaviaratto/Single-Image-Haze-removal-using-Dark-Channel-Prior-and-Guided-Image-Filtering-)
+[See Project Repository](https://github.com/flaviaratto/Single-Image-Haze-removal-using-Dark-Channel-Prior-and-Guided-Image-Filtering-)
