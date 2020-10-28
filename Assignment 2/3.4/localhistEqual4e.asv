@@ -1,0 +1,27 @@
+function g = localhistEqual4e(f,m,n)
+
+%replicate padding of f
+f=padarray(f,[1,1],'replicate','both');
+[row,col] = size(f);
+pdf=imageHist4e(f,'n');
+
+for i=2:(row-1)
+    for j=2:(col-1)
+        for x=i-1:i-1+m
+            for y=j-1:j-1+n
+                temp=f(x,y)+1;    %+1 is added because array cannot take 0 value
+                c(temp)=c(temp)+1;  
+                
+            end
+        end
+        for temp=1:256
+            pdf(temp)=c(temp)/(row*col); %calculate pdf
+        end
+        cdf(1)=pdf(1);
+
+        for temp=2:256
+            cdf(temp)=(pdf(temp)+cdf(temp-1)); %calculate cdf
+        end
+        for temp=1:256
+            g(temp)=round(cdf(temp)*255); %new value
+        end
